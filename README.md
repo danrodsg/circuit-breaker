@@ -1,4 +1,4 @@
-# ⚡ Go Circuit Breaker 
+# ⚡ Circuit Breaker 
 
 Este projeto é uma demonstração simples de como implementar o padrão **Circuit Breaker** (Disjuntor) usando a popular biblioteca `github.com/sony/gobreaker` em GoLang.
 
