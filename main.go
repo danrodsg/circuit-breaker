@@ -17,6 +17,11 @@ func mockService() (string, error) {
 	return "", errors.New("error trying to process request")
 }
 
+func logStateChange(name string, from, to gobreaker.State) {
+	fmt.Printf("%s: State change: %s -> %s\n", name, statetoString(from), statetoString(to))
+}
+
+
 func statetoString(state gobreaker.State) string {
 	switch state {
 	case gobreaker.StateClosed:
@@ -41,7 +46,7 @@ func main() {
 			return counts.ConsecutiveFailures > 2
 
 		},
-
+		OnStateChange: logStateChange,
 	}
 
 	cb := gobreaker.NewCircuitBreaker(settings)
