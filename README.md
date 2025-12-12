@@ -10,7 +10,7 @@ Este projeto não requer dependências externas além do próprio pacote Go.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [SEU_LINK_DO_REPOSITÓRIO]
+    git clone github.com/danrodsg/circuit-breaker
     cd go-circuit-breaker-demo
     ```
 
